@@ -1,5 +1,6 @@
 import * as React from "react";
 import { View, Text } from "react-native";
+import Overview from "./components/Overview"
 
 export default function App() {
   return (
@@ -10,7 +11,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <Text>Hello!</Text>
+      <Overview/>
     </View>
   );
 }
