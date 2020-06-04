@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Back componente renders screen 1`] = `
+<View
+  onClick={[Function]}
+  style={
+    Object {
+      "flexDirection": "row",
+      "margin": "20px",
+      "position": "relative",
+      "textAlign": "left",
+      "width": 750,
+      "zIndex": 99,
+    }
+  }
+>
+  <div />
+</View>
+`;

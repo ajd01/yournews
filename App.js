@@ -9,24 +9,6 @@ import {
   Reducer
 } from './store'
 
-const styles = StyleSheet.create({
-  Header: {
-    paddingTop: 5,
-    paddingBottom: 5,
-    fontSize: '3em',
-    fontWeight: 'bold',
-    backgroundColor: '#000',
-    color: '#fff',
-    textAlign: 'center',
-    width: Dimensions.get('window').width,
-    position: 'fixed',
-    zIndex: 98
-  },
-  Content: {
-    marginTop: 60
-  }
-})
-
 export default function App () {
   const [store, dispatch] = useReducer(Reducer, InitialState)
 
@@ -54,3 +36,21 @@ export default function App () {
 
   )
 }
+
+const styles = StyleSheet.create({
+  Header: {
+    paddingTop: 5,
+    paddingBottom: 5,
+    fontSize: 3,
+    fontWeight: 'bold',
+    backgroundColor: '#000',
+    color: '#fff',
+    textAlign: 'center',
+    width: Dimensions.get('window').width,
+    position: 'relative',
+    zIndex: 98
+  },
+  Content: {
+    marginTop: 60
+  }
+})

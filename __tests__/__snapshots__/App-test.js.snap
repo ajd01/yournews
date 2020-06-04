@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component renders screen 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#c4e248",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "backgroundColor": "#000",
+        "color": "#fff",
+        "fontSize": 3,
+        "fontWeight": "bold",
+        "paddingBottom": 5,
+        "paddingTop": 5,
+        "position": "relative",
+        "textAlign": "center",
+        "width": 750,
+        "zIndex": 98,
+      }
+    }
+  >
+    Your News
+  </Text>
+  <View />
+  <View
+    style={
+      Object {
+        "marginTop": 60,
+      }
+    }
+  >
+    <div />
+  </View>
+</View>
+`;
+
+exports[`Test App renders screen 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#c4e248",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "backgroundColor": "#000",
+        "color": "#fff",
+        "fontSize": 3,
+        "fontWeight": "bold",
+        "paddingBottom": 5,
+        "paddingTop": 5,
+        "position": "relative",
+        "textAlign": "center",
+        "width": 750,
+        "zIndex": 98,
+      }
+    }
+  >
+    Your News
+  </Text>
+  <View />
+  <View
+    style={
+      Object {
+        "marginTop": 60,
+      }
+    }
+  >
+    <div />
+  </View>
+</View>
+`;

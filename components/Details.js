@@ -1,12 +1,10 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { View, Text, Image, StyleSheet, Dimensions, Button } from 'react-native'
-import sources from '../utils/source'
-import HeadLine from './HeadLine'
 import Tools from './Tools'
 import { Context } from '../store'
 
 export default function Details () {
-  const { store, dispatch } = useContext(Context)
+  const { store } = useContext(Context)
 
   const { selectedValue, data } = store
 
