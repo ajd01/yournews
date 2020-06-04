@@ -1,18 +1,31 @@
 import React from "react"
-import { View, Text, Image, StyleSheet } from "react-native"
+import { View, Text, Image, StyleSheet, Dimensions } from "react-native"
+import Tools from './Tools'
 
 const styles = StyleSheet.create({
-    container: {
-      paddingTop: 50,
+    image: {
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').width,
+        paddingBottom: 5,
     },
-    tinyLogo: {
-      width: 50,
-      height: 50,
+    title: {
+        paddingTop: 10,
+        fontSize: '1em',
+        fontWeight: 'bold',
+        width: Dimensions.get('window').width
     },
-    logo: {
-      width: 66,
-      height: 58,
+    author: {
+        fontSize: '.5em',
+        width: Dimensions.get('window').width
     },
+    date: {
+        fontSize: '.5em',
+        fontWeight: 'bold',
+        width: Dimensions.get('window').width
+    },
+    half: {
+        width: Dimensions.get('window').width/2
+    }
   });
 
 export default function HeadLine({ article }) {
@@ -25,18 +38,25 @@ export default function HeadLine({ article }) {
     } = article
 
     const viewArticle = () => {
-        
+
     }
 
     return (
-        <div onClick={viewArticle}>
-            <Text>{title}</Text>
-            <Text>{author}</Text>
-            <Text>{publishedAt}</Text>
+        <View onClick={viewArticle}>
+            <Text style={styles.title}>{title}</Text><br/>
+            <View style={{ flexDirection:"row" }}>
+                <View style={styles.half}>
+                    <Text style={styles.author}>{author}</Text>
+                    <Text style={styles.date}>{new Date(publishedAt).toDateString()}</Text>
+                </View>
+                <View style={styles.half}>
+                    <Tools/>
+                </View>
+            </View>
             <Image
-                style={styles.tinyLogo}
+                style={styles.image}
                 source={urlToImage}
             />
-        </div>
+        </View>
     )
 }
