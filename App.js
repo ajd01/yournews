@@ -40,7 +40,7 @@ export default function App () {
           backgroundColor: '#c4e248'
         }}
       >
-        <Text style={styles.Header}>Yout News</Text>
+        <Text style={styles.Header}>Your News</Text>
         {selected
           ? <Back />
           : <View />}
