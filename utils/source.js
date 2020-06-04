@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-let apiKey =  env.APIKEY || '077cb81fab6b439eb699f9e9472c7b2a'
+let apiKey =  process.env.APIKEY || '077cb81fab6b439eb699f9e9472c7b2a'
 apiKey = `&apiKey=${apiKey}`
 
 const getNews = async () => {
