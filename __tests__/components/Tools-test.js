@@ -1,5 +1,5 @@
 import React from 'react'
-import Back from '../../components/Back'
+import Tools from '../../components/Tools'
 import renderer from 'react-test-renderer'
 import {
   Context,
@@ -17,14 +17,27 @@ jest.mock('../../components/Icon', () => {
 
 const value = {
   dispatch: jest.fn(),
-  store: InitialState
+  store: {
+    ...InitialState,
+    data: [
+      {
+        author: 'Mockauthor',
+        publishedAt: 'MockpublishedAt',
+        title: 'Mocktitle',
+        urlToImage: 'MockurlToImage',
+        description: 'Mockdescription',
+        content: 'Mockcontent',
+        url: 'Mockurl'
+      }
+    ]
+  }
 }
 
-describe('Back componente', () => {
+describe('Tools componente', () => {
   it('renders initial screen', () => {
     const tree = renderer.create(
       <Context.Provider value={value}>
-        <Back />
+        <Tools />
       </Context.Provider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

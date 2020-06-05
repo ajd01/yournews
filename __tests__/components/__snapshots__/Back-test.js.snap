@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Back componente renders screen 1`] = `
+exports[`Back componente renders initial screen 1`] = `
 <View
   onClick={[Function]}
   style={

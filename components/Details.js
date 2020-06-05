@@ -19,7 +19,7 @@ export default function Details () {
   } = data[selectedValue]
 
   return (
-    <View>
+    <View style={styles.detail}>
       <Text style={styles.title}>{title}</Text><br />
       <View style={{ flexDirection: 'row' }}>
         <View style={styles.half}>
@@ -33,17 +33,18 @@ export default function Details () {
       <Text style={styles.space}>
         {description}
       </Text>
-      <Image style={styles.image} source={urlToImage} />
+      <Image style={styles.image} source={{ uri: urlToImage }} />
       <Text style={styles.space}>
         {content}
       </Text>
-      <Button
-        style={styles.space}
-        title='See more...'
-        onPress={() => {
-          window.open(url, '_blank')
-        }}
-      />
+      <Text style={styles.button}>
+        <Button
+          title='See more'
+          onPress={() => {
+            window.open(url, '_blank')
+          }}
+        />
+      </Text>
     </View>
   )
 }
@@ -57,16 +58,16 @@ const styles = StyleSheet.create({
   },
   title: {
     paddingTop: 10,
-    fontSize: '2em',
+    fontSize: 25,
     fontWeight: 'bold',
     width: Dimensions.get('window').width
   },
   author: {
-    fontSize: '1em',
+    fontSize: 15,
     width: Dimensions.get('window').width
   },
   date: {
-    fontSize: '1em',
+    fontSize: 15,
     fontWeight: 'bold',
     width: Dimensions.get('window').width
   },
@@ -74,6 +75,14 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width / 2
   },
   space: {
-    paddingTop: 20
+    paddingTop: 20,
+    paddingBottom: 20
+  },
+  button: {
+    padding: 20,
+    textAlign: 'center'
+  },
+  detail: {
+    padding: 5
   }
 })

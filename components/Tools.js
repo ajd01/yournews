@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { View, StyleSheet, Dimensions } from 'react-native'
-import { Icon } from 'react-native-elements'
+import Icon from './Icon'
 import { Context } from '../store'
 
 export default function Tools ({ id }) {
@@ -30,12 +30,14 @@ export default function Tools ({ id }) {
     name='star-o'
     type='font-awesome'
     color='#f50'
+    key={value}
     onClick={() => dispatchRate(value)}
   />
   const star = (value) => <Icon
     name='star'
     type='font-awesome'
     color='#f50'
+    key={value}
     onClick={() => dispatchRate(value)}
   />
 

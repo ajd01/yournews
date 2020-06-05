@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Overview componente renders initial screen 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <div>
+    <View>
+      <Text
+        onClick={[Function]}
+        style={
+          Object {
+            "fontSize": 22,
+            "fontWeight": "bold",
+            "padding": 5,
+            "paddingBottom": 10,
+            "paddingTop": 30,
+            "width": 750,
+          }
+        }
+      >
+        Mocktitle
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "padding": 5,
+              "width": 375,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "fontSize": 15,
+                "width": 750,
+              }
+            }
+          >
+            Mockauthor
+          </Text>
+          <Text
+            style={
+              Object {
+                "fontSize": 15,
+                "fontWeight": "bold",
+                "width": 750,
+              }
+            }
+          >
+            Invalid Date
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "padding": 5,
+              "width": 375,
+            }
+          }
+        >
+          <div />
+        </View>
+      </View>
+      <Image
+        onClick={[Function]}
+        source={
+          Object {
+            "uri": "MockurlToImage",
+          }
+        }
+        style={
+          Object {
+            "height": 750,
+            "marginTop": 15,
+            "paddingBottom": 5,
+            "width": 750,
+          }
+        }
+      />
+    </View>
+  </div>
+</View>
+`;

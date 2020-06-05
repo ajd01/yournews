@@ -3,15 +3,17 @@ import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
 import Tools from './Tools'
 import { Context } from '../store'
 
-export default function HeadLine ({ article, id }) {
-  const { dispatch } = useContext(Context)
+export default function HeadLine ({ id }) {
+  const { store, dispatch } = useContext(Context)
+
+  const { data } = store
 
   const {
     author,
     publishedAt,
     title,
     urlToImage
-  } = article
+  } = data[id]
 
   const getDetail = () => {
     dispatch({
@@ -39,7 +41,7 @@ export default function HeadLine ({ article, id }) {
       </View>
       <Image
         style={styles.image}
-        source={urlToImage}
+        source={{ uri: urlToImage }}
         onClick={() => getDetail()}
       />
     </View>
@@ -55,20 +57,23 @@ const styles = StyleSheet.create({
   },
   title: {
     paddingTop: 30,
-    fontSize: '1em',
+    paddingBottom: 10,
+    padding: 5,
+    fontSize: 22,
     fontWeight: 'bold',
     width: Dimensions.get('window').width
   },
   author: {
-    fontSize: '.5em',
+    fontSize: 15,
     width: Dimensions.get('window').width
   },
   date: {
-    fontSize: '.5em',
+    fontSize: 15,
     fontWeight: 'bold',
     width: Dimensions.get('window').width
   },
   half: {
+    padding: 5,
     width: Dimensions.get('window').width / 2
   }
 })

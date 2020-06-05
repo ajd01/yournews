@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tools componente renders initial screen 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "width": 187.5,
+      }
+    }
+  >
+    <div />
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "width": 187.5,
+      }
+    }
+  >
+    <div />
+    <div />
+    <div />
+  </View>
+</View>
+`;

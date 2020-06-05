@@ -1,12 +1,12 @@
 import React from 'react'
-import Back from '../../components/Back'
+import Overview from '../../components/Overview'
 import renderer from 'react-test-renderer'
 import {
   Context,
   InitialState
 } from '../../store'
 
-jest.mock('../../components/Icon', () => {
+jest.mock('../../components/Tools', () => {
   return {
     __esModule: true,
     default: () => {
@@ -15,16 +15,29 @@ jest.mock('../../components/Icon', () => {
   }
 })
 
-const value = {
-  dispatch: jest.fn(),
-  store: InitialState
+const article = {
+  author: 'Mockauthor',
+  publishedAt: 'MockpublishedAt',
+  title: 'Mocktitle',
+  urlToImage: 'MockurlToImage',
+  description: 'Mockdescription',
+  content: 'Mockcontent',
+  url: 'Mockurl'
 }
 
-describe('Back componente', () => {
+const value = {
+  dispatch: jest.fn(),
+  store: {
+    ...InitialState,
+    data: [{ ...article }]
+  }
+}
+
+describe('Overview componente', () => {
   it('renders initial screen', () => {
     const tree = renderer.create(
       <Context.Provider value={value}>
-        <Back />
+        <Overview article={article} id={0} />
       </Context.Provider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

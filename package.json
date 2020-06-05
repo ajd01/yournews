@@ -27,7 +27,7 @@
       "/node_modules/@react-native-community/async-storage/(?!(lib))"
     ],
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
+      "./**/*.{js,jsx}"
     ]
   },
   "scripts": {
@@ -36,7 +36,9 @@
     "ios": "expo start --ios",
     "web": "expo web",
     "eject": "expo eject",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "yarn test -- --coverage"
   },
   "private": true
 }
