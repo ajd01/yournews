@@ -4,13 +4,11 @@ import { Icon } from 'react-native-elements'
 export default function GetIcon ({
   name,
   type,
-  color,
-  onClick
+  color
 }) {
   return <Icon
-    name={name}
-    type={type}
-    color={color}
-    onClick={onClick}
+    name={name || ''}
+    type={type || ''}
+    color={color || ''}
   />
 }

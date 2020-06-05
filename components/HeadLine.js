@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { View, Text, Image, StyleSheet, Dimensions } from 'react-native'
+import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native'
 import Tools from './Tools'
 import { Context } from '../store'
 
@@ -20,30 +20,33 @@ export default function HeadLine ({ id }) {
       type: 'select',
       selectedValue: id
     })
-    window.scrollTo(0, 0)
   }
 
   return (
     <View>
       <Text
         style={styles.title}
-        onClick={() => getDetail()}
+        onPress={() => getDetail()}
       >{title}
       </Text>
+
       <View style={{ flexDirection: 'row' }}>
         <View style={styles.half}>
           <Text style={styles.author}>{author}</Text>
           <Text style={styles.date}>{new Date(publishedAt).toDateString()}</Text>
         </View>
+
         <View style={styles.half}>
           <Tools id={id} />
         </View>
       </View>
-      <Image
-        style={styles.image}
-        source={{ uri: urlToImage }}
-        onClick={() => getDetail()}
-      />
+
+      <TouchableOpacity onPress={() => getDetail()}>
+        <Image
+          style={styles.image}
+          source={{ uri: urlToImage }}
+        />
+      </TouchableOpacity>
     </View>
   )
 }

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { View, StyleSheet, Dimensions } from 'react-native'
+import { TouchableOpacity, StyleSheet, Dimensions, Text } from 'react-native'
 import Icon from './Icon'
 import { Context } from '../store'
 
@@ -7,15 +7,16 @@ export default function Back () {
   const { dispatch } = useContext(Context)
 
   return (
-    <View
-      style={styles.Back} onClick={() => {
+    <TouchableOpacity
+      style={styles.Back} onPress={() => {
         dispatch({
           type: 'unselect'
         })
       }}
     >
       <Icon name='arrow-left' type='font-awesome' color='#f50' />
-    </View>
+      <Text>Back</Text>
+    </TouchableOpacity>
   )
 }
 
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     position: 'relative',
     flexDirection: 'row',
-    margin: '20px',
+    margin: 20,
     zIndex: 99
   }
 })

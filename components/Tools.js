@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { View, StyleSheet, Dimensions } from 'react-native'
+import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native'
 import Icon from './Icon'
 import { Context } from '../store'
 
@@ -26,20 +26,22 @@ export default function Tools ({ id }) {
     })
   }
 
-  const starO = (value) => <Icon
-    name='star-o'
-    type='font-awesome'
-    color='#f50'
-    key={value}
-    onClick={() => dispatchRate(value)}
-  />
-  const star = (value) => <Icon
-    name='star'
-    type='font-awesome'
-    color='#f50'
-    key={value}
-    onClick={() => dispatchRate(value)}
-  />
+  const starO = (value) => (
+    <TouchableOpacity key={value} onPress={() => dispatchRate(value)}>
+      <Icon
+        name='star-o'
+        type='font-awesome'
+        color='#f50'
+      />
+    </TouchableOpacity>)
+  const star = (value) => (
+    <TouchableOpacity key={value} onPress={() => dispatchRate(value)}>
+      <Icon
+        name='star'
+        type='font-awesome'
+        color='#f50'
+      />
+    </TouchableOpacity>)
 
   const rateScore = () => {
     let elements = [false, false, false]
@@ -54,20 +56,19 @@ export default function Tools ({ id }) {
   return (
     <View style={{ flexDirection: 'row' }}>
       <View style={styles.favorite}>
-        {favorite
-          ? <Icon
-            name='heart'
-            type='font-awesome'
-            color='#f50'
-            onClick={() => dispatchFavorite()}
+        <TouchableOpacity onPress={() => dispatchFavorite()}>
+          {favorite
+            ? <Icon
+              name='heart'
+              type='font-awesome'
+              color='#f50'
             />
-          : <Icon
-            name='heart-o'
-            type='font-awesome'
-            color='#f50'
-            onClick={() => dispatchFavorite()}
-          />}
-
+            : <Icon
+              name='heart-o'
+              type='font-awesome'
+              color='#f50'
+            />}
+        </TouchableOpacity>
       </View>
       {rateScore()}
     </View>

@@ -2,11 +2,21 @@
 
 exports[`Back componente renders initial screen 1`] = `
 <View
+  accessible={true}
+  focusable={true}
+  isTVSelectable={true}
   onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
       "flexDirection": "row",
-      "margin": "20px",
+      "margin": 20,
+      "opacity": 1,
       "position": "relative",
       "textAlign": "left",
       "width": 750,
@@ -15,5 +25,8 @@ exports[`Back componente renders initial screen 1`] = `
   }
 >
   <div />
+  <Text>
+    Back
+  </Text>
 </View>
 `;

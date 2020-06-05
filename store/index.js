@@ -11,9 +11,6 @@ export const InitialState = {
 }
 
 export const Reducer = (state, action) => {
-  console.log('dispatch')
-  console.log(state)
-  console.log(action)
   switch (action.type) {
     case 'reset':
       return InitialState

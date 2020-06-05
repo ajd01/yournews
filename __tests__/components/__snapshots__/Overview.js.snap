@@ -10,23 +10,8 @@ exports[`Overview componente renders initial screen 1`] = `
     }
   }
 >
-  <div>
+  <RCTScrollView>
     <View>
-      <Text
-        onClick={[Function]}
-        style={
-          Object {
-            "fontSize": 22,
-            "fontWeight": "bold",
-            "padding": 5,
-            "paddingBottom": 10,
-            "paddingTop": 30,
-            "width": 750,
-          }
-        }
-      >
-        Mocktitle
-      </Text>
       <View
         style={
           Object {
@@ -34,64 +19,108 @@ exports[`Overview componente renders initial screen 1`] = `
           }
         }
       >
-        <View
-          style={
-            Object {
-              "padding": 5,
-              "width": 375,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontSize": 15,
-                "width": 750,
+        <View>
+          <View>
+            <Text
+              onPress={[Function]}
+              style={
+                Object {
+                  "fontSize": 22,
+                  "fontWeight": "bold",
+                  "padding": 5,
+                  "paddingBottom": 10,
+                  "paddingTop": 30,
+                  "width": 750,
+                }
               }
-            }
-          >
-            Mockauthor
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontSize": 15,
-                "fontWeight": "bold",
-                "width": 750,
+            >
+              Mocktitle
+            </Text>
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                }
               }
-            }
-          >
-            Invalid Date
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "padding": 5,
-              "width": 375,
-            }
-          }
-        >
-          <div />
+            >
+              <View
+                style={
+                  Object {
+                    "padding": 5,
+                    "width": 375,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 15,
+                      "width": 750,
+                    }
+                  }
+                >
+                  Mockauthor
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "fontSize": 15,
+                      "fontWeight": "bold",
+                      "width": 750,
+                    }
+                  }
+                >
+                  Invalid Date
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "padding": 5,
+                    "width": 375,
+                  }
+                }
+              >
+                <div />
+              </View>
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "MockurlToImage",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 750,
+                    "marginTop": 15,
+                    "paddingBottom": 5,
+                    "width": 750,
+                  }
+                }
+              />
+            </View>
+          </View>
         </View>
       </View>
-      <Image
-        onClick={[Function]}
-        source={
-          Object {
-            "uri": "MockurlToImage",
-          }
-        }
-        style={
-          Object {
-            "height": 750,
-            "marginTop": 15,
-            "paddingBottom": 5,
-            "width": 750,
-          }
-        }
-      />
     </View>
-  </div>
+  </RCTScrollView>
 </View>
 `;

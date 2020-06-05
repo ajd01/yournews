@@ -16,24 +16,14 @@ export default function App () {
 
   return (
     <Context.Provider value={{ store, dispatch }}>
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: '#c4e248'
-        }}
-      >
-        <Text style={styles.Header}>Your News</Text>
-        {selected
-          ? <Back />
-          : <View />}
-        <View style={styles.Content}>
-          {selected
-            ? <Detail />
-            : <Overview />}
-        </View>
-      </View>
+      <Text style={styles.Header}>Your News</Text>
+      {selected
+        ? <View>
+          <Back />
+          <Detail />
+          </View>
+        : <Overview />}
     </Context.Provider>
-
   )
 }
 
@@ -47,10 +37,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
     width: Dimensions.get('window').width,
-    position: 'relative',
     zIndex: 98
-  },
-  Content: {
-    marginTop: 60
   }
 })
